@@ -8,7 +8,7 @@ print(account.get_account_holder())
 print()
 print("-"*15)
 
-account2 = BankAccount("me", )
+account2 = BankAccount("me", 2000)
 print(account2.deposit(1000))
 print(account2.withdraw(500))
 print(account2.get_balance())
