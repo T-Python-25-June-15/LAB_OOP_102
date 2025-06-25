@@ -4,13 +4,13 @@ class BankAccount:
         self.set_balance(initial_balance)
     
     def deposit(self,amount):
-        self.__initial_balance += amount
-        return self.__initial_balance
+        self.set_balance(self.__initial_balance + amount)
+        return self.get_balance()
     def withdraw(self, amount):
-        if self.__initial_balance < amount:
+        if self.get_balance() < amount:
             raise Exception("Your balance is less than the amount!")
-        self.__initial_balance -= amount
-        return self.__initial_balance
+        self.set_balance(self.__initial_balance - amount)
+        return self.get_balance()
     def set_account_holder(self,account_holder):
         if account_holder == "":
             raise Exception("You need to enter a account name!")
