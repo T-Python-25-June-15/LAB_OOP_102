@@ -6,6 +6,8 @@ class BankAccount:
 
 
     def deposit(self,amount:int):
+        if not isinstance(amount, int) or amount < 0:
+            raise Exception("please enter valid number")
         self.__initial_balance+= amount
         return self.__initial_balance
     
